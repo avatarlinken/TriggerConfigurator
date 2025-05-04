@@ -1,0 +1,6 @@
+/.venv
+/build
+/dist
+/dist2025-4-13.zip
+/trigger_config_gui.zip
+/__pycache__

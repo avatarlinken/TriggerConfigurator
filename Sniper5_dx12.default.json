@@ -1,0 +1,149 @@
+{        
+  "game_name": "狙击精英5",
+      "process_name": "Sniper5_dx12",
+  "period": 50,
+  "vDefines": [
+    {
+      "name": "slot",                                                                
+      "offset": [
+        40411896,
+        112,
+        128,
+        448,
+        16,
+        8,
+        664,
+        80,
+        64,
+        504,
+        212
+      ],
+      "type": "int",
+      "game_version": ""
+    }
+  ],
+  "trigger_default": {
+    "left": {
+      "mode": 1,
+      "param": [
+        25,
+        1,
+        0,
+        0
+      ]
+    },
+    "right": {
+      "mode": 3,
+      "param": [
+        0,
+        30,
+        180,
+        0
+      ]
+    }
+  },
+  "vFilters": [
+    {
+      "name": "主武器",
+      "priority": 0,
+      "vCondition": {
+        "match_type": "and",
+        "items": [
+          {
+            "use_define": "slot",
+            "value": 0,
+            "op": "="
+          }
+        ]
+      },
+      "trigger": {
+        "left": {
+          "mode": 1,
+          "param": [
+            25,
+            1,
+            0,
+            0
+          ]
+        },
+        "right": {
+          "mode": 3,
+          "param": [
+            0,
+            180,
+            180,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "副武器",
+      "priority": 0,
+      "vCondition": {
+        "match_type": "and",
+        "items": [
+          {
+            "use_define": "slot",
+            "value": 1,
+            "op": "="
+          }
+        ]
+      },
+      "trigger": {
+        "left": {
+          "mode": 1,
+          "param": [
+            25,
+            1,
+            0,
+            0
+          ]
+        },
+        "right": {
+          "mode": 2,
+          "param": [
+            30,
+            80,
+            65,
+            11
+          ]
+        }
+      }
+    },
+    {
+        "name": "手枪",
+        "priority": 0,
+        "vCondition": {
+          "match_type": "and",
+          "items": [
+            {
+              "use_define": "slot",
+              "value": 2,
+              "op": "="
+            }
+          ]
+        },
+        "trigger": {
+          "left": {
+            "mode": 1,
+            "param": [
+              25,
+              1,
+              0,
+              0
+            ]
+          },
+          "right": {
+            "mode": 3,
+            "param": [
+              50,
+              30,
+              30,
+              0
+            ]
+          }
+        }
+      }
+  ]
+}
